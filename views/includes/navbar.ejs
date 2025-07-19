@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+    <div class="heading">
+        <p>Velvet Bookings</p>
+      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore or Browse Velvet Stays</a>
+      </div>
+
+      <form action="/listings" method="GET" class="search-bar">
+        <input type="text" name="title" placeholder="Search destinations by hotel name" value="<%= typeof searchTitle !== 'undefined' ? searchTitle : '' %>"/>
+        <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Become a Velvet Host</a>
+        <%if(typeof currUser === 'undefined' || !currUser){ %>
+          <a class="nav-link btn btn-warning" aria-current="page" href="/signup"><b>Sign up/Register as new</b></a>
+          <a class="nav-link btn add-btn" id="logoutbtn" href="/login"><b>Login</b> <i class="fa-solid fa-user"></i></a>
+        <%}%>
+        <%if(currUser){%>
+        <a class="nav-link btn add-btn" id="logoutbtn" href="/logout">Logout </a>
+        <%}%>
+      </div>
+    </div>
+  </div>
+</nav>
