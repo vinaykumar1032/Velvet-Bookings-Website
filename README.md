@@ -9,3 +9,5 @@ Velvet Bookings is a full-stack web application inspired by Airbnb that allows u
 * 💳 Razorpay integration for secure payments
 * 🎨 Sleek, responsive UI with modern dark-themed design
 * 🚀 Optimized performance and mobile-friendly interface
+
+Link: https://velvet-bookings.onrender.com/listings
